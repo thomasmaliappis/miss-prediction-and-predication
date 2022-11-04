@@ -18,8 +18,11 @@ void sort_predicated_inplace( int N , int *data_array ) {
 		int k = 0;
         for (int j = 0; j < N - i - 1; j++) {
 			// swap(&data_array[k], &data_array[j + 1]);
+
+			// find position of largest number
 			k += (data_array[k] < data_array[j + 1]) * (j+1-k);
 		}
+		// swap largest number to the end
 		swap(&data_array[k], &data_array[N-i-1]);
 	}
 
