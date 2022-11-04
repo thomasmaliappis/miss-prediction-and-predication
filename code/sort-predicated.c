@@ -17,7 +17,7 @@ void sort_predicated_inplace( int N , int *data_array ) {
 	for (int i = 0; i < N - 1; i++) {
 		int k = 0;
         for (int j = 0; j < N - i - 1; j++) {
-			swap(&data_array[k], &data_array[j + 1]);
+			// swap(&data_array[k], &data_array[j + 1]);
 			k += (data_array[k] < data_array[j + 1]) * (j+1-k);
 		}
 		swap(&data_array[k], &data_array[N-i-1]);
